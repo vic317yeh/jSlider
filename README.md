@@ -24,5 +24,4 @@ After linking jQuery, bootstrap, jSlider.css and jSlider.js, all you need to do 
 <script>
 $('#jGallery').jSlide();
 </script>
-
 ```
