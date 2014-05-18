@@ -12,7 +12,7 @@ jSlider is a very simple tool for photo display.
 After linking jQuery, bootstrap, jSlider.css and jSlider.js, all you need to do is putting up the following lines.
 
 ```ruby
-<ul id="jGallery">
+<ul id=\"jGallery\">
 	<li><img src="sample-pics/1.jpg"/></li>
 	<li><img src="sample-pics/2.jpg"/></li>
 	<li><img src="sample-pics/5.jpg"/></li>
