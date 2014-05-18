@@ -1,13 +1,13 @@
 jSlider
 =======
 
-jSlider is a jQuery plugin for photo display. The entire folder does not exceed 1MB. Currently the slider can only hold a maximum of 5 photos. 
+jSlider is a simple, light-weighted jQuery plugin for photo display. The entire folder does not exceed 1MB. jSlider is currently a static photo gallery that displays 5 photos.
 
-ps. The project is not yet complete. It will be updated reguarly.
+ps. This is a work in process. It will be updated reguarly.
 
 
 ##How to use?
-jSlider is an extremely simple tool for photo display.
+jSlider is a very simple tool for photo display.
 
 After linking jQuery, bootstrap, jSlider.css and jSlider.js, all you need to do is putting up the following lines.
 
@@ -22,6 +22,8 @@ After linking jQuery, bootstrap, jSlider.css and jSlider.js, all you need to do 
 
 
 <script>
-$('#jGallery').jSlide();
+$(document).ready(function(){
+	$('#jGallery').jSlide();
+});
 </script>
 ```
