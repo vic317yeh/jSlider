@@ -6,6 +6,8 @@ jSlider is a simple, light-weighted jQuery plugin for photo display. The entire 
 ps. This is a work in process. It will be updated reguarly.
 
 
+demo: http://vic317yeh.bol.ucla.edu/jslider/
+
 ##How to use?
 jSlider is a very simple tool for photo display.
 
