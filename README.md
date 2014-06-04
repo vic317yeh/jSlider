@@ -21,8 +21,8 @@ After linking jQuery, bootstrap, jSlider.css and jSlider.js, all you need to do 
 	<li><img src="sample-pics/3.jpg"/></li>	
 	<li><img src="sample-pics/4.jpg"/></li>
 </ul>
-```
-```javascript
+
+
 <script>
 $(document).ready(function(){
 	$('#jGallery').jSlide();
