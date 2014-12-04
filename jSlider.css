@@ -7,8 +7,8 @@
 }
 
 #jGallery li img:hover {
-	background-color:#aaa;
-	border-color:#aaa;
+	background-color:#aaa !important;
+	border-color:#aaa !important;
 	cursor:pointer;
 }
 

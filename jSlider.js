@@ -24,15 +24,15 @@
 			else
 				$this.find('li').eq(curIndex+1).children().css({"background-color":"#fff","border-color":"#021a40"});
 
-			//todo --- animate slide
-//			var oldImage=$("#jGallery #display-container img");
-//			var newImage=$('<img id="display" src="'+curImgSrc+'">');
-//			newImage.hide();
-//			$("#jGallery #display-container").append(newImage);
-//			oldImage.fadeOut(200,function(){
-//				$(this).remove();
-//			});
-//			newImage.fadeIn(1000);
+			//uncomment to stop fade-in animation
+			var oldImage=$("#jGallery #display-container img");
+			var newImage=$('<img id="display"  src="'+curImgSrc+'">');
+			newImage.hide();
+			$("#jGallery #display-container").append(newImage);
+			newImage.fadeIn(500);
+			oldImage.fadeOut(1,function(){
+				$(this).remove();
+			});
 		});
 		
 
@@ -49,15 +49,16 @@
 			else
 				$this.find('li').eq(curIndex-1).children().css({"background-color":"#fff","border-color":"#021a40"});
 				
-			//todo --- animate slide
-//			var oldImage=$("#jGallery #display-container img");
-//			var newImage=$('<img id="display" src="'+curImgSrc+'">');
-//			newImage.hide();
-//			$("#jGallery #display-container").append(newImage);
-//			oldImage.fadeOut(200,function(){
-//				$(this).remove();
-//			});
-//			newImage.fadeIn(1000);
+			//uncomment to stop fade-in animation
+			var oldImage=$("#jGallery #display-container img");
+			var newImage=$('<img id="display" src="'+curImgSrc+'">');
+			newImage.hide();
+			$("#jGallery #display-container").append(newImage);
+			newImage.fadeIn(500);
+			oldImage.fadeOut(1,function(){
+				$(this).remove();
+			});
+			
 		});	
 		
 		$this.find("li img").click(function(){
@@ -69,17 +70,19 @@
 			$this.find("#display").attr("src",curImgSrc);
 			$this.find('li').eq(oldIndex).children().css({"background-color":"#fff","border-color":"#021a40"});
 			$this.find('li').eq(curIndex).children().css({"background-color":"#aaa","border-color":"#aaa"});
+	
+			//uncomment to stop fade-in animation
+			var oldImage=$("#jGallery #display-container img");
+			var newImage=$('<img id="display" src="'+curImgSrc+'">');
+			newImage.hide();
+			$("#jGallery #display-container").append(newImage);
+			newImage.fadeIn(500);
+			oldImage.fadeOut(1,function(){
+				$(this).remove();
+			});
+
 		});
 		
-		$this.find('li img').hover(function(){
-			var $that=$(this);
-			if ($that.parent().index()-1!=curIndex)
-				$that.css({"background-color":"#aaa","border-color":"#aaa"});
-		},function(){
-			var $that=$(this);
-			if ($that.parent().index()-1!=curIndex)
-				$that.css({"background-color":"#fff","border-color":"#021a40"});
-		});	
 	return this;
    }; 
 })(jQuery);
