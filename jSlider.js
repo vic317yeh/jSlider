@@ -24,7 +24,7 @@
 			else
 				$this.find('li').eq(curIndex+1).children().css({"background-color":"#fff","border-color":"#021a40"});
 
-			//uncomment to stop fade-in animation
+			//comment to stop fade-in animation
 			var oldImage=$("#jGallery #display-container img");
 			var newImage=$('<img id="display"  src="'+curImgSrc+'">');
 			newImage.hide();
@@ -49,7 +49,7 @@
 			else
 				$this.find('li').eq(curIndex-1).children().css({"background-color":"#fff","border-color":"#021a40"});
 				
-			//uncomment to stop fade-in animation
+			//comment to stop fade-in animation
 			var oldImage=$("#jGallery #display-container img");
 			var newImage=$('<img id="display" src="'+curImgSrc+'">');
 			newImage.hide();
@@ -71,7 +71,7 @@
 			$this.find('li').eq(oldIndex).children().css({"background-color":"#fff","border-color":"#021a40"});
 			$this.find('li').eq(curIndex).children().css({"background-color":"#aaa","border-color":"#aaa"});
 	
-			//uncomment to stop fade-in animation
+			//comment to stop fade-in animation
 			var oldImage=$("#jGallery #display-container img");
 			var newImage=$('<img id="display" src="'+curImgSrc+'">');
 			newImage.hide();
