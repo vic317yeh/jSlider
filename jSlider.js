@@ -1,3 +1,14 @@
+function slideFadeIn(curImgSrc) {
+	var oldImage=$("#jGallery #display-container img");
+	var newImage=$('<img id="display"  src="'+curImgSrc+'">');
+	newImage.hide();
+	$("#jGallery #display-container").append(newImage);
+	newImage.fadeIn(500);
+	oldImage.fadeOut(1,function(){
+		$(this).remove();
+	});
+}
+
 (function($){
    $.fn.jSlide = function() {
 		$this=$(this);
@@ -25,14 +36,8 @@
 				$this.find('li').eq(curIndex+1).children().css({"background-color":"#fff","border-color":"#021a40"});
 
 			//comment to stop fade-in animation
-			var oldImage=$("#jGallery #display-container img");
-			var newImage=$('<img id="display"  src="'+curImgSrc+'">');
-			newImage.hide();
-			$("#jGallery #display-container").append(newImage);
-			newImage.fadeIn(500);
-			oldImage.fadeOut(1,function(){
-				$(this).remove();
-			});
+			slideFadeIn(curImgSrc);
+
 		});
 		
 
@@ -50,15 +55,8 @@
 				$this.find('li').eq(curIndex-1).children().css({"background-color":"#fff","border-color":"#021a40"});
 				
 			//comment to stop fade-in animation
-			var oldImage=$("#jGallery #display-container img");
-			var newImage=$('<img id="display" src="'+curImgSrc+'">');
-			newImage.hide();
-			$("#jGallery #display-container").append(newImage);
-			newImage.fadeIn(500);
-			oldImage.fadeOut(1,function(){
-				$(this).remove();
-			});
-			
+			slideFadeIn(curImgSrc);
+
 		});	
 		
 		$this.find("li img").click(function(){
@@ -72,14 +70,7 @@
 			$this.find('li').eq(curIndex).children().css({"background-color":"#aaa","border-color":"#aaa"});
 	
 			//comment to stop fade-in animation
-			var oldImage=$("#jGallery #display-container img");
-			var newImage=$('<img id="display" src="'+curImgSrc+'">');
-			newImage.hide();
-			$("#jGallery #display-container").append(newImage);
-			newImage.fadeIn(500);
-			oldImage.fadeOut(1,function(){
-				$(this).remove();
-			});
+			slideFadeIn(curImgSrc);
 
 		});
 		
